@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:postgresql://localhost:3307/learn_hibernate</property>
+
+        <!--Драйвер пострес-->
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">1234</property>
+
+        <!--Диалект Постреса-->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL10Dialect</property>
+
+        <!--запись всех сгенерированных операторов SQL на консоль-->
+        <property name="show_sql">true</property>
+        <!--Форматирование сгенерированного операторв SQL, чтобы сделать его более читабельным,
+        но занимает больше места на экране-->
+        <property name="format_sql">true</property>
+        <property name="hibernate.hibernate.hbm2ddl.auto">update</property>
+    </session-factory>
+</hibernate-configuration>
